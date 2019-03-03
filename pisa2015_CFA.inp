@@ -1,0 +1,24 @@
+TITLE:  CFA for Teamwork in Science (PISA 2015)
+Data:   FILE IS pisa2015_EFA_CFA.csv;
+
+Variable: 
+
+    NAMES ARE cnt age escs science gender tw1-tw8
+    sle1-sle14 tia1-tia17 at1-at9 psa1-psa9;
+    
+    CATEGORICAL ARE tw1 tw5 tw7 tw8;
+    
+    USEVARIABLES ARE tw1 tw5 tw7 tw8;
+
+    MISSING ARE ALL (99);
+
+ANALYSIS: 
+
+    ESTIMATOR = WLSMV;
+
+MODEL:
+    
+    tw BY tw1* tw5 tw7 tw8;
+    tw@1;
+
+OUTPUT: MODINDICES(10) RESIDUAL STAND;

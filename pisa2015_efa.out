@@ -1,0 +1,610 @@
+Mplus VERSION 7.2
+MUTHEN & MUTHEN
+03/03/2019   3:31 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:  EFA for Teamwork in Science (PISA 2015)
+  DATA:   FILE IS pisa2015_EFA_CFA.csv;
+
+  VARIABLE:
+
+      NAMES ARE cnt age escs science gender tw1-tw8
+      sle1-sle14 tia1-tia17 at1-at9 psa1-psa9;
+
+      CATEGORICAL ARE tw1-tw8;
+
+      USEVARIABLES ARE tw1-tw8;
+
+      MISSING ARE ALL (99);
+
+  ANALYSIS:
+
+      ESTIMATOR = WLSMV;
+      TYPE = EFA 1 2;
+
+  OUTPUT: MODINDICES;
+
+
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  930
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+EFA for Teamwork in Science (PISA 2015)
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                       28379
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   TW1         TW2         TW3         TW4         TW5         TW6
+   TW7         TW8
+
+
+Estimator                                                    WLSMV
+Rotation                                                    GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Epsilon value                                               Varies
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+
+Input data file(s)
+  pisa2015_EFA_CFA.csv
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            77
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+ TW1            0.998
+ TW2            0.994         0.996
+ TW3            0.994         0.993         0.996
+ TW4            0.992         0.991         0.991         0.994
+ TW5            0.994         0.992         0.992         0.991         0.995
+ TW6            0.990         0.989         0.989         0.987         0.989
+ TW7            0.992         0.990         0.991         0.989         0.991
+ TW8            0.990         0.988         0.989         0.987         0.989
+
+
+           Covariance Coverage
+              TW6           TW7           TW8
+              ________      ________      ________
+ TW6            0.992
+ TW7            0.988         0.993
+ TW8            0.986         0.987         0.992
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    TW1
+      Category 1    0.079     2232.000
+      Category 2    0.243     6890.000
+      Category 3    0.491    13899.000
+      Category 4    0.187     5294.000
+    TW2
+      Category 1    0.013      362.000
+      Category 2    0.096     2726.000
+      Category 3    0.654    18479.000
+      Category 4    0.237     6704.000
+    TW3
+      Category 1    0.018      496.000
+      Category 2    0.069     1941.000
+      Category 3    0.669    18895.000
+      Category 4    0.245     6930.000
+    TW4
+      Category 1    0.016      441.000
+      Category 2    0.101     2849.000
+      Category 3    0.687    19382.000
+      Category 4    0.196     5529.000
+    TW5
+      Category 1    0.045     1281.000
+      Category 2    0.225     6351.000
+      Category 3    0.516    14583.000
+      Category 4    0.214     6032.000
+    TW6
+      Category 1    0.013      374.000
+      Category 2    0.083     2337.000
+      Category 3    0.652    18362.000
+      Category 4    0.251     7070.000
+    TW7
+      Category 1    0.061     1721.000
+      Category 2    0.227     6395.000
+      Category 3    0.505    14224.000
+      Category 4    0.208     5852.000
+    TW8
+      Category 1    0.031      860.000
+      Category 2    0.097     2730.000
+      Category 3    0.594    16723.000
+      Category 4    0.278     7826.000
+
+
+
+SUMMARY OF MODEL FIT INFORMATION
+
+
+                   Number of                   Degrees of
+     Model        Parameters      Chi-Square    Freedom     P-Value
+
+     1-factor           8          29577.666        20       0.0000
+     2-factor          15            868.828        13       0.0000
+
+                                               Degrees of
+     Models Compared              Chi-Square    Freedom     P-Value
+
+     1-factor against 2-factor     18539.296         7       0.0000
+
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+      1         4.184         1.491         0.562         0.470         0.396
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  6             7             8
+              ________      ________      ________
+      1         0.333         0.309         0.255
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        8
+
+Chi-Square Test of Model Fit
+
+          Value                          29577.666*
+          Degrees of Freedom                    20
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.228
+          90 Percent C.I.                    0.226  0.230
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.848
+          TLI                                0.788
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                         195027.068
+          Degrees of Freedom                    28
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.124
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       3.98573
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ TW1            0.689*
+ TW2            0.451*
+ TW3            0.695*
+ TW4            0.703*
+ TW5            0.747*
+ TW6            0.652*
+ TW7            0.833*
+ TW8            0.809*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+      1         0.526         0.797         0.517         0.506         0.442
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              TW6           TW7           TW8
+              ________      ________      ________
+      1         0.575         0.306         0.346
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ TW1            0.003
+ TW2            0.005
+ TW3            0.004
+ TW4            0.004
+ TW5            0.003
+ TW6            0.004
+ TW7            0.002
+ TW8            0.003
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+      1         0.005         0.005         0.005         0.005         0.004
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              TW6           TW7           TW8
+              ________      ________      ________
+      1         0.005         0.004         0.004
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ TW1          204.438
+ TW2           87.523
+ TW3          184.823
+ TW4          195.085
+ TW5          257.860
+ TW6          168.099
+ TW7          365.649
+ TW8          318.638
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+      1       113.238       171.620        98.847        99.935       102.324
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              TW6           TW7           TW8
+              ________      ________      ________
+      1       113.899        80.600        84.274
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       15
+
+Chi-Square Test of Model Fit
+
+          Value                            868.828*
+          Degrees of Freedom                    13
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.048
+          90 Percent C.I.                    0.045  0.051
+          Probability RMSEA <= .05           0.863
+
+CFI/TLI
+
+          CFI                                0.996
+          TLI                                0.991
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                         195027.068
+          Degrees of Freedom                    28
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.013
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.57381
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ TW1           -0.156*        0.856*
+ TW2            0.688*       -0.150*
+ TW3            0.774*        0.035*
+ TW4            0.832*       -0.004*
+ TW5            0.061*        0.745*
+ TW6            0.640*        0.138*
+ TW7            0.000         0.881*
+ TW8            0.225*        0.687*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2         0.532*        1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+      1         0.385         0.614         0.371         0.311         0.393
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              TW6           TW7           TW8
+              ________      ________      ________
+      1         0.476         0.223         0.313
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ TW1            0.007         0.005
+ TW2            0.007         0.008
+ TW3            0.006         0.008
+ TW4            0.003         0.000
+ TW5            0.006         0.005
+ TW6            0.006         0.007
+ TW7            0.000         0.002
+ TW8            0.006         0.005
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.007         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+      1         0.005         0.006         0.006         0.006         0.005
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              TW6           TW7           TW8
+              ________      ________      ________
+      1         0.005         0.004         0.004
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ TW1          -21.704       158.799
+ TW2           98.380       -18.114
+ TW3          124.573         4.586
+ TW4          247.627       -12.405
+ TW5            9.893       152.600
+ TW6          105.058        19.084
+ TW7            0.893       392.319
+ TW8           39.258       146.018
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2        78.330         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+      1        75.901        98.916        66.051        55.357        86.840
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              TW6           TW7           TW8
+              ________      ________      ________
+      1        89.064        56.548        74.620
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ TW1            0.300         0.773
+ TW2            0.608         0.216
+ TW3            0.793         0.447
+ TW4            0.830         0.439
+ TW5            0.458         0.777
+ TW6            0.714         0.479
+ TW7            0.469         0.881
+ TW8            0.591         0.807
+
+
+MODIFICATION INDICES
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 1 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+ TW1            0.000
+ TW2         1924.390         0.000
+ TW3         2087.431      2348.461         0.000
+ TW4         2672.329      2003.277      5513.939         0.000
+ TW5          888.172      1108.638      1147.926      1158.346         0.000
+ TW6         1760.241      1098.250       700.654      2321.122       337.777
+ TW7         2512.334      1656.831      2301.652      2827.829      1776.819
+ TW8          649.237       243.247       370.861       668.713         5.488
+
+
+           THETA
+              TW6           TW7           TW8
+              ________      ________      ________
+ TW6            0.000
+ TW7          969.945         0.000
+ TW8           67.282       428.456         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+ TW1            0.000
+ TW2           -0.247         0.000
+ TW3           -0.253         0.228         0.000
+ TW4           -0.285         0.214         0.305         0.000
+ TW5            0.122        -0.186        -0.179        -0.175         0.000
+ TW6           -0.229         0.165         0.124         0.210        -0.091
+ TW7            0.199        -0.231        -0.257        -0.281         0.168
+ TW8            0.107        -0.086        -0.096        -0.129         0.010
+
+
+           THETA
+              TW6           TW7           TW8
+              ________      ________      ________
+ TW6            0.000
+ TW7           -0.155         0.000
+ TW8           -0.039         0.086         0.000
+
+
+     MODIFICATION INDICES FOR ANALYSIS WITH 2 FACTOR(S)
+
+
+
+     MODIFICATION INDICES
+
+
+           THETA
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+ TW1            0.000
+ TW2            5.273         0.000
+ TW3           18.277        57.461         0.000
+ TW4            1.406       160.301        65.259         0.000
+ TW5            0.794        43.569         1.458        31.914         0.000
+ TW6          243.653        23.783       270.881        37.554        55.613
+ TW7          198.907         0.486         7.516        16.732       195.704
+ TW8          282.622        14.139        18.641        35.864       272.939
+
+
+           THETA
+              TW6           TW7           TW8
+              ________      ________      ________
+ TW6            0.000
+ TW7           22.248         0.000
+ TW8           21.662         3.149         0.000
+
+
+     EXPECTED PARAMETER CHANGE
+
+
+           THETA
+              TW1           TW2           TW3           TW4           TW5
+              ________      ________      ________      ________      ________
+ TW1            0.000
+ TW2            0.011         0.000
+ TW3            0.020         0.034         0.000
+ TW4            0.006        -0.063         0.044         0.000
+ TW5           -0.003        -0.028        -0.005         0.023         0.000
+ TW6           -0.066         0.019        -0.070         0.027         0.027
+ TW7           -0.065        -0.003        -0.012        -0.018         0.052
+ TW8            0.057         0.015         0.016        -0.024        -0.052
+
+
+           THETA
+              TW6           TW7           TW8
+              ________      ________      ________
+ TW6            0.000
+ TW7            0.018         0.000
+ TW8            0.016        -0.006         0.000
+
+
+DIAGRAM INFORMATION
+
+  Mplus diagrams are currently not available for EFA.
+  No diagram output was produced.
+
+
+     Beginning Time:  15:31:10
+        Ending Time:  15:31:12
+       Elapsed Time:  00:00:02
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2014 Muthen & Muthen
